@@ -166,6 +166,7 @@ def test_monorepo_ci_enforces_live_backend_to_sdk_drift_when_available() -> None
     assert "parampilot-backend/schemas/programmatic-openapi.json" in text
     assert "parampilot_codegen --check" in text
     assert "submodules: recursive" in text
+    assert '- "packages/parampilot-api"' in text
     assert "parampilot_release extract" not in text
     assert "parampilot_release audit" not in text
     assert "parampilot-python-public" not in text
