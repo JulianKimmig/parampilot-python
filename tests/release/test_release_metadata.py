@@ -169,7 +169,7 @@ def test_monorepo_ci_enforces_live_backend_to_sdk_drift_when_available() -> None
     assert "parampilot_release extract" not in text
     assert "parampilot_release audit" not in text
     assert "parampilot-python-public" not in text
-    assert "tests/release/clean_wheel_probe.py" in text
+    assert "tests/release/clean_wheel_probe.py" not in text
     assert "packages/worker" in text
     assert "uv run pytest" in text
     assert 'python-version: "3.12"' in text
