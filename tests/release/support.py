@@ -142,6 +142,7 @@ def committed_sdk_repository(tmp_path: Path) -> CommittedSdkRepository:
         PACKAGE_ROOT,
         package,
         ignore=shutil.ignore_patterns(
+            ".git",
             ".mypy_cache",
             ".parampilot-public-manifest.json",
             ".pytest_cache",
