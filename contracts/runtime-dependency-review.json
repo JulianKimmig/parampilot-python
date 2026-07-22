@@ -1,0 +1,79 @@
+{
+  "decision": "approved-for-initial-candidate",
+  "format_version": 1,
+  "packages": [
+    {
+      "license": "MIT",
+      "name": "annotated-types",
+      "source": "https://pypi.org/project/annotated-types/0.7.0/",
+      "version": "0.7.0"
+    },
+    {
+      "license": "MIT",
+      "name": "anyio",
+      "source": "https://pypi.org/project/anyio/4.14.2/",
+      "version": "4.14.2"
+    },
+    {
+      "license": "MPL-2.0",
+      "name": "certifi",
+      "source": "https://pypi.org/project/certifi/2026.6.17/",
+      "version": "2026.6.17"
+    },
+    {
+      "license": "MIT",
+      "name": "exceptiongroup",
+      "source": "https://pypi.org/project/exceptiongroup/1.3.1/",
+      "version": "1.3.1"
+    },
+    {
+      "license": "MIT",
+      "name": "h11",
+      "source": "https://pypi.org/project/h11/0.16.0/",
+      "version": "0.16.0"
+    },
+    {
+      "license": "BSD-3-Clause",
+      "name": "httpcore",
+      "source": "https://pypi.org/project/httpcore/1.0.9/",
+      "version": "1.0.9"
+    },
+    {
+      "license": "BSD-3-Clause",
+      "name": "httpx",
+      "source": "https://pypi.org/project/httpx/0.28.1/",
+      "version": "0.28.1"
+    },
+    {
+      "license": "BSD-3-Clause",
+      "name": "idna",
+      "source": "https://pypi.org/project/idna/3.18/",
+      "version": "3.18"
+    },
+    {
+      "license": "MIT",
+      "name": "pydantic",
+      "source": "https://pypi.org/project/pydantic/2.13.4/",
+      "version": "2.13.4"
+    },
+    {
+      "license": "MIT",
+      "name": "pydantic-core",
+      "source": "https://pypi.org/project/pydantic-core/2.46.4/",
+      "version": "2.46.4"
+    },
+    {
+      "license": "PSF-2.0",
+      "name": "typing-extensions",
+      "source": "https://pypi.org/project/typing-extensions/4.16.0/",
+      "version": "4.16.0"
+    },
+    {
+      "license": "MIT",
+      "name": "typing-inspection",
+      "source": "https://pypi.org/project/typing-inspection/0.4.2/",
+      "version": "0.4.2"
+    }
+  ],
+  "reviewed_at": "2026-07-15"
+}

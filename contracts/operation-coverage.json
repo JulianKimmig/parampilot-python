@@ -1,0 +1,279 @@
+{
+  "exclusions": [],
+  "format_version": 1,
+  "operations": {
+    "archiveCampaign": {
+      "may_train": false,
+      "method": "archive",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "batchUpsertExperiments": {
+      "may_train": false,
+      "method": "batch_upsert",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "cancelModelJob": {
+      "may_train": false,
+      "method": "cancel",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createAskJob": {
+      "may_train": false,
+      "method": "create_ask_job",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createCampaign": {
+      "may_train": false,
+      "method": "create",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createCampaignTransferLink": {
+      "may_train": false,
+      "method": "create",
+      "resource": "campaign_transfer_links",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createConfiguredCampaign": {
+      "may_train": false,
+      "method": "create_configured",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createPredictionJob": {
+      "may_train": false,
+      "method": "create_prediction_job",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "createTrainingJob": {
+      "may_train": true,
+      "method": "train_model",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "deleteCampaignAccessGrant": {
+      "may_train": false,
+      "method": "delete",
+      "resource": "campaign_access",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "deleteCampaignTransferLink": {
+      "may_train": false,
+      "method": "delete",
+      "resource": "campaign_transfer_links",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "deleteExperiment": {
+      "may_train": false,
+      "method": "delete",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "downloadGridPredictions": {
+      "may_train": false,
+      "method": "download_grid_predictions",
+      "resource": "model_artifacts",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "exportEffectiveExperiments": {
+      "may_train": false,
+      "method": "export_effective",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "exportExperiments": {
+      "may_train": false,
+      "method": "export",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getAvailability": {
+      "may_train": false,
+      "method": "get_availability",
+      "resource": "client",
+      "status": "implemented",
+      "task": "TASK-007"
+    },
+    "getCampaign": {
+      "may_train": false,
+      "method": "get",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getCampaignStatus": {
+      "may_train": false,
+      "method": "get_status",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getExperiment": {
+      "may_train": false,
+      "method": "get",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getModelJob": {
+      "may_train": false,
+      "method": "get",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getModelJobObservation": {
+      "may_train": false,
+      "method": "get_observation",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getModelJobResult": {
+      "may_train": false,
+      "method": "get_result",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "getShapResults": {
+      "may_train": false,
+      "method": "get_shap_results",
+      "resource": "model_artifacts",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "importExperimentsFile": {
+      "may_train": false,
+      "method": "import_file",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "listCampaignAccessGrants": {
+      "may_train": false,
+      "method": "list",
+      "resource": "campaign_access",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "listCampaigns": {
+      "may_train": false,
+      "method": "list",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "listExperiments": {
+      "may_train": false,
+      "method": "list",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "listModelJobObservations": {
+      "may_train": false,
+      "method": "list_observations",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "listModelJobs": {
+      "may_train": false,
+      "method": "list",
+      "resource": "model_jobs",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "patchExperiment": {
+      "may_train": false,
+      "method": "patch",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "queryEffectiveExperiments": {
+      "may_train": false,
+      "method": "query_effective",
+      "resource": "experiments",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "replaceCampaignAdditionalFields": {
+      "may_train": false,
+      "method": "replace_additional_fields",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "replaceCampaignDomain": {
+      "may_train": false,
+      "method": "replace_domain",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "replaceCampaignEffects": {
+      "may_train": false,
+      "method": "replace_effects",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "replaceCampaignStrategy": {
+      "may_train": false,
+      "method": "replace_strategy",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "startCampaign": {
+      "may_train": false,
+      "method": "start",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "unlockCampaign": {
+      "may_train": false,
+      "method": "unlock",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "updateCampaignSettings": {
+      "may_train": false,
+      "method": "update_settings",
+      "resource": "campaigns",
+      "status": "implemented",
+      "task": "TASK-009"
+    },
+    "upsertCampaignAccessGrant": {
+      "may_train": false,
+      "method": "upsert",
+      "resource": "campaign_access",
+      "status": "implemented",
+      "task": "TASK-009"
+    }
+  }
+}

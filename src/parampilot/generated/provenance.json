@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "generator": {
+    "distribution": "datamodel-code-generator",
+    "options": {
+      "formatters": [
+        "builtin"
+      ],
+      "openapi_scopes": [
+        "schemas"
+      ],
+      "remote_refs": false,
+      "root_model_sequence_interface": true,
+      "schema_adapter": "union-constraints-v1",
+      "schema_version": "3.1",
+      "schema_version_mode": "strict"
+    },
+    "preset": "practical-py310-20260619",
+    "target_pydantic": "2.12",
+    "target_python": "3.10",
+    "version": "0.68.1"
+  },
+  "input": {
+    "bytes": 773818,
+    "normalized_bytes": 775140,
+    "normalized_sha256": "1359680957bb64c8dfd90f9bfed66cbeb9a873873a85eeea066e45450ef87274",
+    "openapi": "3.1.0",
+    "operations": 39,
+    "path": "contracts/programmatic-openapi.json",
+    "paths": 34,
+    "schemas": 228,
+    "sha256": "a657824fc73aac598a530652348f441b7c3c3f37641d1d6972617487b8b6b1db"
+  },
+  "outputs": {
+    "src/parampilot/generated/model_exports.py": {
+      "bytes": 6267,
+      "path": "src/parampilot/generated/model_exports.py",
+      "sha256": "6d09db6ace6fa1d72979653f13216ce6faecaf1089a25d7cd3f2045782f3966c"
+    },
+    "src/parampilot/generated/models.py": {
+      "bytes": 262616,
+      "path": "src/parampilot/generated/models.py",
+      "sha256": "ec9979d974ed72cd0f1306ce87fce77b194ccef4206430ccf98931355343e6c8"
+    },
+    "src/parampilot/generated/operations.json": {
+      "bytes": 172010,
+      "path": "src/parampilot/generated/operations.json",
+      "sha256": "c66d6d28c49f6439e4a09b3e53bf91f94e579d083f62c5bc34a87b5e6282ffc6"
+    },
+    "src/parampilot/models/__init__.pyi": {
+      "bytes": 11037,
+      "path": "src/parampilot/models/__init__.pyi",
+      "sha256": "3d698a4c42ad3eae567f248c77edac3af65875ef8d33bfd341f138a9fef4e5d7"
+    }
+  },
+  "reviewed_inputs": {
+    "operation_coverage": {
+      "bytes": 7143,
+      "path": "contracts/operation-coverage.json",
+      "sha256": "613e2b3c1a5364a89cff46d93f3a66ca3b109c08b113b904d6c980047a76bede"
+    }
+  }
+}

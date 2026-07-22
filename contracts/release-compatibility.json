@@ -1,0 +1,30 @@
+{
+  "data_review": "owner-approved-no-additional-deny-literals",
+  "external_v1_consumers": "none-owner-confirmed",
+  "format_version": 2,
+  "package_version": "0.1.0",
+  "programmatic_api_major": 2,
+  "provenance": "manifest-only",
+  "python": [
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14"
+  ],
+  "real_worker_profile": {
+    "cleanup": "in-memory",
+    "credentials": false,
+    "data": "four-row-synthetic",
+    "network": false,
+    "result": "passed",
+    "timeout_seconds": 300
+  },
+  "release_disposition": "candidate-dry-run-only",
+  "runtime_dependencies": [
+    "httpx>=0.28.1,<1",
+    "pydantic>=2.12,<3"
+  ],
+  "schema_sha256": "a657824fc73aac598a530652348f441b7c3c3f37641d1d6972617487b8b6b1db",
+  "server_api": ">=2.0.0,<3.0.0"
+}

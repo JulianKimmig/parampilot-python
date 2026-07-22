@@ -1,0 +1,81 @@
+name: Public SDK CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990 # v8.3.2
+        with:
+          version: "0.11.16"
+          enable-cache: true
+      - name: Install locked development environment
+        run: uv sync --all-groups --locked
+      - name: Verify generated contracts
+        run: uv run python -m parampilot_codegen --check
+      - name: Run package tests
+        run: uv run pytest
+      - name: Audit locked dependency graph
+        if: matrix.python-version == '3.14'
+        run: uv audit --locked
+      - name: Run static and build gates
+        if: matrix.python-version == '3.14'
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy
+          uv build --no-build-isolation
+      - name: Verify wheel outside the source tree
+        if: matrix.python-version == '3.14'
+        shell: bash
+        run: |
+          wheel_path="$(find dist -maxdepth 1 -type f -name '*.whl' -print -quit)"
+          test -n "${wheel_path}"
+          environment="${RUNNER_TEMP}/parampilot-wheel"
+          uv venv --python "${{ matrix.python-version }}" "${environment}"
+          uv pip install --python "${environment}/bin/python" "${wheel_path}"
+          cd "${RUNNER_TEMP}"
+          "${environment}/bin/python" -I \
+            "${GITHUB_WORKSPACE}/tests/release/clean_wheel_probe.py"
+  dependency-lower-bounds:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.14"]
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990 # v8.3.2
+        with:
+          version: "0.11.16"
+          enable-cache: true
+      - name: Resolve and test lower direct dependency bounds
+        run: |
+          mv uv.lock "${RUNNER_TEMP}/candidate-uv.lock"
+          uv sync --all-groups --resolution lowest-direct
+          uv run --no-sync python -c 'from importlib.metadata import version; assert version("httpx") == "0.28.1"; assert version("pydantic").startswith("2.12.")'
+          mv "${RUNNER_TEMP}/candidate-uv.lock" uv.lock
+          uv run --no-sync pytest
