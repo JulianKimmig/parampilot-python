@@ -165,10 +165,10 @@ def test_monorepo_ci_enforces_live_backend_to_sdk_drift_when_available() -> None
     assert "--schema-source" in text
     assert "parampilot-backend/schemas/programmatic-openapi.json" in text
     assert "parampilot_codegen --check" in text
-    assert "parampilot_release extract" in text
-    assert "parampilot_release audit" in text
-    assert "parampilot-python-public" in text
-    assert "uv pip install --python" in text
+    assert "submodules: recursive" in text
+    assert "parampilot_release extract" not in text
+    assert "parampilot_release audit" not in text
+    assert "parampilot-python-public" not in text
     assert "tests/release/clean_wheel_probe.py" in text
     assert "packages/worker" in text
     assert "uv run pytest" in text
